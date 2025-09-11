@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify, session, render_template, redirect, url_for
 from app.ollama_proxy import query_ollama
 import requests
+import re
 
 chatbot_bp = Blueprint('chatbot_bp', __name__)
 
@@ -22,6 +23,8 @@ def chatbot():
 # Student page
 @chatbot_bp.route('/student')
 def student():
+    if not session.get('is_student'):
+        return redirect(url_for('chatbot_bp.student_login'))
     return render_template('chatbot.html', user_type='student')
 
 # Google Sign-In callback
@@ -64,3 +67,18 @@ def chat():
 @chatbot_bp.route('/history', methods=['GET'])
 def history():
     return jsonify({'history': []})
+
+
+@chatbot_bp.route('/student-login', methods=['GET', 'POST'])
+def student_login():
+    error = None
+    if request.method == 'POST':
+        email = request.form.get('email', '').strip().lower()
+        # Replace with your college's domain
+        if re.match(r'^[a-z0-9._%+-]+@pkonnect\.edu\.np$', email):
+            session['user_email'] = email
+            session['is_student'] = True
+            return redirect(url_for('chatbot_bp.student'))
+        else:
+            error = "Please enter a valid college student email."
+    return render_template('institution_login.html', error=error)
