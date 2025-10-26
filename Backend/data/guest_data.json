@@ -1,0 +1,43 @@
+{
+  "admission_process": {
+    "overview": "Padma Kanya College offers undergraduate programs in BSC CSIT and BIT. Admission is based on merit and entrance exams.",
+    "requirements": [
+      "Completed +2 or equivalent with minimum GPA",
+      "Entrance exam score",
+      "Application form submission"
+    ],
+    "deadlines": "Applications open in June, close in August each year.",
+    "fees": "Contact admissions for detailed fee structure."
+  },
+  "contact_info": {
+    "address": "Padma Kanya College, Bagbazar, Kathmandu, Nepal",
+    "phone": "+977-1-XXXXXXX",
+    "email": "info@pkonnect.edu.np",
+    "website": "www.pkonnect.edu.np"
+  },
+  "events": [
+    "Annual Cultural Fest in December",
+    "Career Counseling Sessions monthly",
+    "Alumni Meet annually",
+    "Open House for prospective students"
+  ],
+  "college_overview": {
+    "history": "Established in 1951, Padma Kanya College is a premier institution for women's education in Nepal.",
+    "facilities": [
+      "Modern classrooms",
+      "Computer labs",
+      "Library with extensive collection",
+      "Sports facilities",
+      "Cafeteria"
+    ],
+    "programs": [
+      "BSC CSIT (Bachelor of Science in Computer Science and Information Technology)",
+      "BIT (Bachelor of Information Technology)"
+    ]
+  },
+  "public_notices": [
+    "College open from 9 AM to 5 PM.",
+    "Admission inquiries: contact admissions@pkonnect.edu.np",
+    "Campus tour available on weekends."
+  ]
+}

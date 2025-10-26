@@ -1,0 +1,145 @@
+{
+  "student": {
+    "grades": {
+      "semester1": {
+        "Information Systems": "A-",
+        "Web Development": "B+",
+        "Database Management": "A"
+      },
+      "semester2": {
+        "Networking": "B",
+        "Software Engineering": "A-",
+        "IT Project Management": "A"
+      },
+      "gpa": "3.7"
+    },
+    "exam_schedules": [
+      {
+        "subject": "Networking",
+        "date": "November 10th, 2023",
+        "time": "10 AM - 12 PM",
+        "location": "Lab 301, IT Block"
+      },
+      {
+        "subject": "Software Engineering",
+        "date": "November 12th, 2023",
+        "time": "2 PM - 4 PM",
+        "location": "Room 201, Main Building"
+      }
+    ],
+    "class_locations": [
+      {
+        "subject": "Information Systems",
+        "room": "Room 201, Main Building",
+        "days": "Mon, Wed, Fri",
+        "time": "10 AM - 11:30 AM"
+      },
+      {
+        "subject": "Web Development",
+        "room": "Lab 301, IT Block",
+        "days": "Tue, Thu",
+        "time": "12 PM - 1:30 PM"
+      }
+    ],
+    "notices": [
+      "Final project submission due November 15th.",
+      "Internship opportunities posted.",
+      "Sports week starts November 3rd.",
+      "IT Career Fair on November 18th."
+    ],
+    "class_timings": "10 AM - 5 PM, Monday to Friday",
+    "seats": "Available seats in BIT: 40"
+  },
+  "teacher": {
+    "student_lists": [
+      {
+        "class": "BIT Year 1",
+        "students": [
+          "Karen Lee",
+          "Liam Garcia",
+          "Mia Rodriguez",
+          "Noah Martinez",
+          "Olivia Hernandez"
+        ]
+      },
+      {
+        "class": "BIT Year 2",
+        "students": [
+          "Parker Lopez",
+          "Quinn Gonzalez",
+          "Riley Perez",
+          "Sophia Torres",
+          "Tyler Ramirez"
+        ]
+      }
+    ],
+    "attendance_rates": {
+      "Information Systems": {
+        "class_average": "82%",
+        "individual": {
+          "Karen Lee": "90%",
+          "Liam Garcia": "75%",
+          "Mia Rodriguez": "88%"
+        }
+      },
+      "Web Development": {
+        "class_average": "90%",
+        "individual": {
+          "Karen Lee": "95%",
+          "Liam Garcia": "88%",
+          "Mia Rodriguez": "92%"
+        }
+      }
+    },
+    "grade_overviews": {
+      "Information Systems": {
+        "average_grade": "B",
+        "distribution": {
+          "A": 8,
+          "A-": 12,
+          "B+": 18,
+          "B": 10,
+          "C+": 2
+        }
+      },
+      "Web Development": {
+        "average_grade": "A-",
+        "distribution": {
+          "A": 15,
+          "A-": 20,
+          "B+": 12,
+          "B": 3
+        }
+      }
+    },
+    "notices": [
+      "Workshop on AI on November 5th.",
+      "Grade submissions deadline November 20th.",
+      "Research paper submissions open.",
+      "IT Conference presentation opportunity."
+    ],
+    "class_timings": "10 AM - 5 PM, Monday to Friday",
+    "seats": "Lab capacity: 50 students"
+  },
+  "others": {
+    "budgets": {
+      "annual_budget": "45,000,000 NPR",
+      "department_allocation": "8,000,000 NPR",
+      "research_fund": "1,500,000 NPR"
+    },
+    "policies": [
+      "IT Security Policy",
+      "Data Privacy Policy",
+      "Equipment Usage Policy",
+      "Software Licensing Policy"
+    ],
+    "notices": [
+      "IT maintenance on November 4th.",
+      "Alumni meet on November 8th.",
+      "New software licenses available.",
+      "System upgrade scheduled for November 22nd."
+    ],
+    "class_timings": "10 AM - 5 PM, Monday to Friday",
+    "seats": "Conference room seats: 30"
+  }
+}

@@ -1,12 +1,31 @@
 import requests
 import json
 import re
+import os
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "gemma:2b"
+OLLAMA_MODEL = "llama3.2:1b"
+
+# Load data files
+DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+guest_data = {}
+bsc_csit_data = {}
+bit_data = {}
+
+try:
+    with open(os.path.join(DATA_DIR, 'guest_data.json'), 'r') as f:
+        guest_data = json.load(f)
+    with open(os.path.join(DATA_DIR, 'bsc_csit_data.json'), 'r') as f:
+        bsc_csit_data = json.load(f)
+    with open(os.path.join(DATA_DIR, 'bit_data.json'), 'r') as f:
+        bit_data = json.load(f)
+except FileNotFoundError as e:
+    print(f"Data file not found: {e}")
+except json.JSONDecodeError as e:
+    print(f"Error loading JSON: {e}")
 
 # ---------------- SYSTEM PROMPT ----------------
-def get_system_prompt(user_role="general"):
+def get_system_prompt(user_role="general", department=None, role=None):
     instructions = (
         "FORMAT RULES:\n"
         "- Output must be plain text only.\n"
@@ -29,18 +48,27 @@ def get_system_prompt(user_role="general"):
         "Always give clean, organized plain text answers. "
         "Never use Markdown or formatting symbols. "
     )
-    return base + instructions
+    data_context = ""
+    if department and role:
+        base += f" You are assisting a {role} in the {department} department. Provide information relevant to {department} and {role} access level."
+        if department == 'BSC CSIT' and role in bsc_csit_data:
+            data_context = f" Available data: {json.dumps(bsc_csit_data[role])}"
+        elif department == 'BIT' and role in bit_data:
+            data_context = f" Available data: {json.dumps(bit_data[role])}"
+    elif user_role == "guest":
+        data_context = f" Available data: {json.dumps(guest_data)}"
+    return base + data_context + instructions
 
 # ---------------- QUERY OLLAMA ----------------
-def query_ollama(prompt, model=OLLAMA_MODEL, user_role="general"):
+def query_ollama(prompt, model=OLLAMA_MODEL, user_role="general", department=None, role=None):
     data = {
         "model": model,
         "prompt": prompt,
-        "system": get_system_prompt(user_role),
+        "system": get_system_prompt(user_role, department, role),
         "stream": True
     }
     try:
-        with requests.post(OLLAMA_URL, json=data, stream=True, timeout=60) as response:
+        with requests.post(OLLAMA_URL, json=data, stream=True, timeout=30) as response:
             response.raise_for_status()
             result = ""
             for line in response.iter_lines(decode_unicode=True):

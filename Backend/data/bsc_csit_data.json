@@ -1,0 +1,144 @@
+{
+  "student": {
+    "grades": {
+      "semester1": {
+        "Mathematics": "A",
+        "Physics": "B+",
+        "Programming": "A-"
+      },
+      "semester2": {
+        "Data Structures": "A",
+        "Algorithms": "B",
+        "Database Systems": "A-"
+      },
+      "gpa": "3.8"
+    },
+    "exam_schedules": [
+      {
+        "subject": "Data Structures",
+        "date": "November 5th, 2023",
+        "time": "10 AM - 12 PM",
+        "location": "Room 101, Main Building"
+      },
+      {
+        "subject": "Algorithms",
+        "date": "November 7th, 2023",
+        "time": "2 PM - 4 PM",
+        "location": "Lab 201, CS Block"
+      }
+    ],
+    "class_locations": [
+      {
+        "subject": "Mathematics",
+        "room": "Room 101, Main Building",
+        "days": "Mon, Wed, Fri",
+        "time": "9 AM - 10:30 AM"
+      },
+      {
+        "subject": "Programming",
+        "room": "Lab 201, CS Block",
+        "days": "Tue, Thu",
+        "time": "11 AM - 12:30 PM"
+      }
+    ],
+    "notices": [
+      "Mid-term exams start on November 1st.",
+      "Library hours extended to 8 PM.",
+      "New cafeteria menu available.",
+      "Project submission deadline: November 15th."
+    ],
+    "class_timings": "9 AM - 4 PM, Monday to Friday",
+    "seats": "Available seats in BSC CSIT: 50"
+  },
+  "teacher": {
+    "student_lists": [
+      {
+        "class": "BSC CSIT Year 1",
+        "students": [
+          "Alice Johnson",
+          "Bob Smith",
+          "Carol Williams",
+          "David Brown",
+          "Eva Davis"
+        ]
+      },
+      {
+        "class": "BSC CSIT Year 2",
+        "students": [
+          "Frank Miller",
+          "Grace Wilson",
+          "Henry Moore",
+          "Ivy Taylor",
+          "Jack Anderson"
+        ]
+      }
+    ],
+    "attendance_rates": {
+      "Mathematics": {
+        "class_average": "85%",
+        "individual": {
+          "Alice Johnson": "95%",
+          "Bob Smith": "80%",
+          "Carol Williams": "90%"
+        }
+      },
+      "Programming": {
+        "class_average": "88%",
+        "individual": {
+          "Alice Johnson": "98%",
+          "Bob Smith": "85%",
+          "Carol Williams": "92%"
+        }
+      }
+    },
+    "grade_overviews": {
+      "Mathematics": {
+        "average_grade": "B+",
+        "distribution": {
+          "A": 10,
+          "B+": 15,
+          "B": 20,
+          "C+": 5
+        }
+      },
+      "Programming": {
+        "average_grade": "A-",
+        "distribution": {
+          "A": 20,
+          "A-": 15,
+          "B+": 10,
+          "B": 5
+        }
+      }
+    },
+    "notices": [
+      "Faculty meeting on October 30th.",
+      "Submit grades by November 10th.",
+      "New curriculum guidelines released.",
+      "Professional development workshop on November 20th."
+    ],
+    "class_timings": "9 AM - 4 PM, Monday to Friday",
+    "seats": "Class capacity: 60 students"
+  },
+  "others": {
+    "budgets": {
+      "annual_budget": "50,000,000 NPR",
+      "department_allocation": "10,000,000 NPR",
+      "research_fund": "2,000,000 NPR"
+    },
+    "policies": [
+      "Academic Integrity Policy",
+      "Attendance Policy: Minimum 75% required",
+      "Grading Policy: Based on continuous assessment and finals",
+      "Code of Conduct for Students and Staff"
+    ],
+    "notices": [
+      "Maintenance work on November 2nd.",
+      "Guest lecture series starting soon.",
+      "Event registration open.",
+      "Annual budget review meeting on November 25th."
+    ],
+    "class_timings": "9 AM - 4 PM, Monday to Friday",
+    "seats": "Auditorium seats: 200"
+  }
+}
